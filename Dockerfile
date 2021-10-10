@@ -12,10 +12,12 @@ RUN git clone --depth=1 https://github.com/nVisium/MoneyX.git .
 
 RUN gradle bootRepackage
 
+#using the new agent version with the new, email-based, authentication 
 # ADD https://files.trendmicro.com/products/CloudOne/ApplicationSecurity/1.0/trend_app_protect-4.1.2.jar trend_app_protect-4.1.2.jar
 ADD https://files.trendmicro.com/products/CloudOne/ApplicationSecurity/1.0.2/agent-java/trend_app_protect-4.4.5.jar  trend_app_protect-4.4.5.jar
 EXPOSE 8080
 
-CMD java -javaagent:trend_app_protect-4.1.2.jar -jar build/libs/moneyx.jar
+# CMD java -javaagent:trend_app_protect-4.1.2.jar -jar build/libs/moneyx.jar
+CMD java -javaagent:trend_app_protect-4.4.5.jar -jar build/libs/moneyx.jar
 
 ENV TREND_AP_LOG_FILE=STDERR
