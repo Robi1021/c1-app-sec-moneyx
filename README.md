@@ -1,6 +1,11 @@
 # c1-app-sec-moneyx
 Sample Java Spring application running in a container, for Cloud One Application Security demos
   
+## Updates (20211012)
+You need to edit the Dockerfile and uncomment the right URL and Agent, depending on the way you are authenticating to CloudOne   
+- "accountbased" This uses the inital CloudOne instance in the USA (only for existing C1 accounts) 
+- "emailbased"  This allows to use regional CloudOne instances e.g in Europe ("emailbased" is the default for new accounts) 
+
 ## Detailed Description
 This is a sample, vulnerable-on-purpose, Java Spring application that can be used to demo Cloud One Application Security.
 
