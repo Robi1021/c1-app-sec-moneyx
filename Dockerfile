@@ -24,4 +24,4 @@ EXPOSE 8080
 #use this agent with the new, emailbased, authentication to C1
 #emailbased CMD java -javaagent:trend_app_protect-4.4.5.jar -jar build/libs/moneyx.jar
 
- ENV TREND_AP_LOG_FILE=STDERR
+ENV TREND_AP_LOG_FILE=STDERR
