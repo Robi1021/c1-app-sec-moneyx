@@ -12,8 +12,7 @@ This is a sample, vulnerable-on-purpose, Java Spring application that can be use
 MoneyX was created by the fine folks over at nVisium.
 
 See:  https://github.com/nVisium/MoneyX
-
-## Pre-Requisites for Usage
+ ## Pre-Requisites for Usage
 
 * Docker
 * A Cloud One Application Security account
@@ -30,7 +29,7 @@ docker run --rm -d -p 8080:8080 --name moneyx-app-protect -e TREND_AP_KEY=<KEY> 
 2. Access the app on port 8080
 
 ### Exploit
-
+  
 1. Follow the instructions in [exploits.md](exploits.md) to exploit the application.  Demonstrate that the exploits work against the vulnerable app.
 
 2. Switch Cloud One Application Security rules from "Report" to "Mitigate".
