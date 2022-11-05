@@ -5,8 +5,10 @@ Sample Java Spring application running in a container, for Cloud One Application
 The C1AS agent in this container (image) now uses the new, emailbased, authentication mechanism in CloudOne.    
 This allows to use regional CloudOne instances e.g in Europe 
 
-Download with 
+Download with
+```
 git clone https://github.com/Robi1021/c1-app-sec-moneyx.git
+```
 
 ## Detailed Description
 This is a sample, vulnerable-on-purpose, Java Spring application that can be used to demo Cloud One Application Security.
