@@ -44,7 +44,11 @@ env:
 kubectl apply -f k8-app.yml
 ```
 
-2. Access the app on port 8080
+4. Access the app through the address from the loadbalancer on port 8080 (check for ip/fqdn with)
+```
+kubectl get services
+```
+
 
 ### Exploit
   
