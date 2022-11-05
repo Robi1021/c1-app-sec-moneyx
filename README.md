@@ -31,8 +31,15 @@ docker run --rm -d -p 8080:8080 --name moneyx-app-protect -e TREND_AP_KEY=<KEY> 
 ### Deploy the container in your Cluster 
 
 1. Download the git repo using "git clone ..."
-2. Edit 
-Run
+2. Edit the k8.app.yml to set your Trend Micro App Sec key & Secret:
+```
+env:
+        - name: TREND_AP_KEY
+          value: <YOUR_APP_SEC_KEY_HERE>
+        - name: TREND_AP_SECRET
+          value: <YOUR_APP_SEC_SECRET_HERE>
+```
+3. Run
 ```
 kubectl apply -f k8-app.yml
 ```
