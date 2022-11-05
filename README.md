@@ -1,10 +1,6 @@
 # c1-app-sec-moneyx
 Sample Java Spring application running in a container, for Cloud One Application Security demos
   
-## Updates (20211012)
-The C1AS agent in this container (image) now uses the new, emailbased, authentication mechanism in CloudOne.    
-This allows to use regional CloudOne instances e.g in Europe 
-
 Download with
 ```
 git clone https://github.com/Robi1021/c1-app-sec-moneyx.git
@@ -14,8 +10,8 @@ git clone https://github.com/Robi1021/c1-app-sec-moneyx.git
 This is a sample, vulnerable-on-purpose, Java Spring application that can be used to demo Cloud One Application Security.
 
 MoneyX was created by the fine folks over at nVisium.
-
 See:  https://github.com/nVisium/MoneyX
+
  ## Pre-Requisites for Usage
 
 * Docker
@@ -32,6 +28,17 @@ docker run --rm -d -p 8080:8080 --name moneyx-app-protect -e TREND_AP_KEY=<KEY> 
 
 2. Access the app on port 8080
 
+### Deploy the container in your Cluster 
+
+1. Download the git repo using "git clone ..."
+2. Edit 
+Run
+```
+kubectl apply -f k8-app.yml
+```
+
+2. Access the app on port 8080
+
 ### Exploit
   
 1. Follow the instructions in [exploits.md](exploits.md) to exploit the application.  Demonstrate that the exploits work against the vulnerable app.
@@ -39,5 +46,10 @@ docker run --rm -d -p 8080:8080 --name moneyx-app-protect -e TREND_AP_KEY=<KEY> 
 2. Switch Cloud One Application Security rules from "Report" to "Mitigate".
 
 3. Follow the instructions in [exploits.md](exploits.md) again. Demonstrate that the exploits **no longer** work.
+
+## Updates (20211012)
+The C1AS agent in this container (image) now uses the new, emailbased, authentication mechanism in CloudOne.    
+This allows to use regional CloudOne instances e.g in Europe 
+
  
  
