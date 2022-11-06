@@ -1,10 +1,4 @@
 # c1-app-sec-moneyx
-Sample Java Spring application running in a container, for Cloud One Application Security demos
-  
-Download with
-```
-git clone https://github.com/Robi1021/c1-app-sec-moneyx.git
-```
 
 ## Detailed Description
 This is a sample, vulnerable-on-purpose, Java Spring application that can be used to demo Cloud One Application Security.
@@ -18,6 +12,10 @@ See:  https://github.com/nVisium/MoneyX
 * A Cloud One Application Security account
 * MOADSD-NG, Jenkins and Kubernetes
 
+Download with
+```
+git clone https://github.com/Robi1021/c1-app-sec-moneyx.git
+```
 
 ### Start the container locally 
 
