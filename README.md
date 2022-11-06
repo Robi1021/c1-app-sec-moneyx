@@ -11,8 +11,7 @@ See:  https://github.com/nVisium/MoneyX
 * Docker
 * A Cloud One Application Security account
 * MOADSD-NG, Jenkins and Kubernetes
-
-Download with
+* Download the repo with:
 ```
 git clone https://github.com/Robi1021/c1-app-sec-moneyx.git
 ```
