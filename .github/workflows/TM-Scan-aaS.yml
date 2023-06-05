@@ -1,0 +1,20 @@
+- name: Trend Cloud One Container Security Scan Action
+  uses: trendmicro/cloudone-container-security-github-action@version*
+   with:
+      # Mandatory
+      CLOUD_ONE_API_KEY: ${{ secrets.API_KEY }}
+      REGION: us-1
+
+      # Optional
+      SBOM: true # Saves SBOM to SBOM.json so you can export it as an artifact later.
+      IMAGE: alpine # The image need to be public or the pipeline need to have access to the private image of choice.
+      LOCAL_IMAGE_TARBALL: image.tar
+      # For each threshold below, select the maximum number of vulnerabilities that are acceptable.
+      MAX_TOTAL: 0
+      MAX_CRITICAL: 0
+      MAX_HIGH: 0
+      MAX_MEDIUM: 0
+      MAX_LOW: 0
+      MAX_NEGLIGIBLE: 0
+      MAX_UNKNOWN: 0
+      SCAN_RESULT_ARTIFACT: result.json # Save as an artifact in GitHub to be able to keep the result of the scan.
